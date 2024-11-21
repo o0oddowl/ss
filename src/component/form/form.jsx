@@ -25,7 +25,7 @@ const Form = () => {
         tg.MainButton.setParams({
             text: 'Тик-Тик'
         })
-    }, [])
+    }, [tg.MainButton])
 
     useEffect(() =>{
         if(!country){
