@@ -1,4 +1,7 @@
 import './App.css';
+import {Route, Routes } from 'react-router-dom';
+import ProductList from './component/productList/ProductList';
+import Form from './component/form/form';
 const tg = window.Telegram.WebApp
 
 function App() {
@@ -6,8 +9,11 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>S</h1>
-      <button onClick={onClose}>Close</button>
+      <header />
+      <Routes>
+        <Route index element = {<ProductList />} />
+        <Route path={'form'} element = {<Form />} />
+      </Routes>
     </div>
   );
 }
