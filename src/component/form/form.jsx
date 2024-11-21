@@ -12,13 +12,13 @@ const Form = () => {
             country
         }
         tg.sendData(JSON.stringify(data))
-    }, [country])
+    }, [country, tg])
     useEffect(()=>{
         tg.onEvent('mainButtonClicked', onSendData)
         return() => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
-    },[onSendData])
+    },[onSendData, tg])
 
 
     useEffect(() =>{
@@ -33,7 +33,7 @@ const Form = () => {
         } else{
             tg.MainButton.show()
         }
-    }, [country])
+    }, [country, tg])
 
 
     return(
