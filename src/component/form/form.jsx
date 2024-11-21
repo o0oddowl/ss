@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './form.css'
+import {useTelegram} from "src/hoock/useTelegram"
 const Form = () => {
+    const {tg} = useTelegram()
+
+    useEffect(() =>{
+        tg.MainButton.show()
+        tg.MainButton.setParams({
+            text: 'Тик-Тик'
+        })
+    }, [])
+
+
     return(
         <div className={"form"}>
             <h3>Введінь дані</h3>
