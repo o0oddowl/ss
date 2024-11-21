@@ -5,8 +5,8 @@ const Form = () => {
     const {tg} = useTelegram()
     const [country, setCountry] = useState('')
     const onChangee = (e) => {
-        setCountry(e, target.value)
-    }
+        setCountry(e.target.value)
+    }    
     const onSendData = useCallback(()=>{
         const data = {
             country
