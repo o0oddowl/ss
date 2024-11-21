@@ -11,6 +11,7 @@ const Form = () => {
         const data = {
             country
         }
+        console.log('Sending data:', data);
         tg.sendData(JSON.stringify(data))
     }, [country, tg])
     useEffect(()=>{
